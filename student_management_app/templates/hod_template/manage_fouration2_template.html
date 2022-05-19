@@ -1,0 +1,460 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+    Manage Foration
+{% endblock page_title %}
+{% block main_content %}
+
+{% load static %}
+<section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+
+                  <h3> {{fouration.mode_tir}}</h3>
+
+                  <p> Mode de tir </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ staff_count }}</h3>
+
+                  <p>Type de tir </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Mode charge </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Largeur </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Nbr trou range </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+
+                  <h3> {{fouration.mode_tir}}</h3>
+
+                  <p> Tranche</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ staff_count }}</h3>
+
+                  <p>Profondeur </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Dosage  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Niveau </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Nbr de trou </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+                <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+
+                  <h3> {{fouration.mode_tir}}</h3>
+
+                  <p> Maille </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ staff_count }}</h3>
+                  <p>Panneau </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Longueur </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Nbr range </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Ammonix </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+
+                  <h3> {{fouration.mode_tir}}</h3>
+
+                  <p> Raccords100ms</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ staff_count }}</h3>
+
+                  <p>Raccords25ms </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Raccords17ms </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Raccords42ms </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>MF </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+              <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+
+                  <h3> {{fouration.mode_tir}}</h3>
+
+                  <p> Tovex </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ staff_count }}</h3>
+
+                  <p>Ligne de tir </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Dosage réaliser</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Volume </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Repertition </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ course_count }}</h3>
+
+                  <p>Detos500ms</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>Surface </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+               <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>{{ subject_count }}</h3>
+
+                  <p>CI </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+
+          </div>
+          <!-- /.row -->
+
+                <!-- /.card-body -->
+
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+
+
+          <div class="col-lg-6">
+
+          </div>
+
+        </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}

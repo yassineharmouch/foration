@@ -1,0 +1,134 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+    Manage Foration
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+
+            <a class="btn btn-primary" href="{% url 'add_fouration' %}" role="button">+ Add Paramétres</a> <br/>&nbsp;
+
+            {% if messages %}
+                                <div class="form-group">
+                                <div class="col-12">
+                                    {% for message in messages %}
+                                    {% if message.tags == "error" %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% elif message.tags == "success" %}
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                </div>
+                                {% endif %}
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Foration Details</h3>
+
+                            <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Mode de tir</th>
+                                 <th>Type  de tir</th>
+                                 <th>Mode charge</th>
+                                 <th>Largeur</th>
+                                 <th>Nbr trou range</th>
+                                 <th>Tranche</th>
+                                 <th>Profondeur</th>
+                                 <th>dossage</th>
+                                 <th>Niveau</th>
+                                 <th>Nbr de trou</th>
+                                 <th>Maille</th>
+                                 <th>Panneau</th>
+                                 <th>Longueur</th>
+                                 <th>Nbr range</th>
+
+                                 <th>mf</th>
+                                 <th>deto500ms</th>
+                                 <th>surface</th>
+                                 <th>volume</th>
+
+                                <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fouration in fourations %}
+                                <tr>
+                                <td>{{ fouration.id }}</td>
+                                <td>{{ fouration.mode_tir }}</td>
+                                <td>{{ fouration.type_tir }}</td>
+                                <td>{{ fouration.mode_charge }}</td>
+                                <td>{{ fouration.largeur }}</td>
+                                <td>{{ fouration.nbr_trou_range }}</td>
+                                <td>{{ fouration.tranche }}</td>
+                                <td>{{ fouration.profondeur }}</td>
+                                <td>{{ fouration.dossage }}</td>
+                                <td>{{ fouration.niveau }}</td>
+                                <td>{{ fouration.nbr_trou }}</td>
+                                <td>{{ fouration.maille }}</td>
+                                <td>{{ fouration.panneau }}</td>
+                                <td>{{ fouration.longueur }}</td>
+                                <td>{{ fouration.nbr_range }}</td>
+
+
+                                <td>{{ fouration.mf }}</td>
+                                <td>{{ fouration.deto500 }}</td>
+                                <td>{{ fouration.surface }}</td>
+                                <td>{{ fouration.volume }}</td>
+
+
+
+
+                                <td>
+                                    <a href="{% url 'edit_fouration' fouration.id %}" class="btn btn-success">Edit</a>
+                                    <a href="{% url 'delete_fouration' fouration.id %}" class="btn btn-danger">Delete</a>
+                                </td>
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}
